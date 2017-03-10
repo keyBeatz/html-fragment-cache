@@ -2,7 +2,7 @@
 /*
 Plugin Name: HTML fragment cache
 Description: HTML fragment cache
-Version: 0.1
+Version: 0.9
 */
 
 defined( 'ABSPATH' ) || exit();
@@ -66,7 +66,7 @@ class hacPlugin
 		$this->bootstrap();
 	}
 
-	function bootstrap() {
+	private function bootstrap() {
 		// core classes
 		require_once( $this->plugin_dir . "core/classes/files.php" );
 		require_once( $this->plugin_dir . "core/classes/naming.php" );

@@ -78,10 +78,6 @@ class hacNaming
 		$depth 			= $this->group_hierarchy;			// depth in folder hierarchy
 		$input_count 	= count( $input );
 
-		var_dump($depth);
-		var_dump($input_count);
-		var_dump($is_group);
-
 		if( $depth && is_numeric( $depth ) && ( $depth < $input_count ) && $is_group ) {
 
 			// get halves

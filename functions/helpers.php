@@ -1,6 +1,9 @@
 <?php
 
-function hac_rmr_dir( $dir, $leave_parent = true ) {
+/**
+ *	Function: remove dirs recursively or entire dir
+ */
+function hac_rmr_dir( $dir ) {
 	if( is_dir( $dir ) ) {
 		$objects = scandir( $dir );
 		foreach ( $objects as $object ) {
@@ -11,10 +14,13 @@ function hac_rmr_dir( $dir, $leave_parent = true ) {
 					unlink( $dir . "/" . $object );
 			}
 		}
-	 	rmdir( $dir );
+ 		rmdir( $dir );
 	}
 }
 
+/**
+ *	Function: create dirs recursively
+ */
 function hac_mkdir_r( $filename ) {
 	if( empty( $filename ) || !is_string( $filename ) )
 		return false;
